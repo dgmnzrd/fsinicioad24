@@ -59,5 +59,17 @@ Route::get( '/doctores/{id}', [ DoctoresController::class, 'show' ] ) -> name( '
 Route::put( '/doctores/update/{id}', [ DoctoresController::class, 'update' ] ) -> name( 'doctores.update' );
 
 Route::get( '/especialidades', [ EspecialidadesController::class, 'index' ] ) -> name( 'especialidades.index' );
+Route::get( '/especialidades/create', [ EspecialidadesController::class, 'create' ] ) -> name( 'especialidades.create' );
+Route::post( '/especialidades/store', [ EspecialidadesController::class, 'store' ] ) -> name( 'especialidades.store' );
+Route::delete( '/especialidades/destroy/{id}', [ EspecialidadesController::class, 'destroy' ] ) -> name( 'especialidades.destroy' );
+Route::get( '/especialidades/edit/{id}', [ EspecialidadesController::class, 'edit' ] ) -> name( 'especialidades.edit' );
+Route::get( '/especialidades/{id}', [ EspecialidadesController::class, 'show' ] ) -> name( 'especialidades.show' );
+Route::put( '/especialidades/update/{id}', [ EspecialidadesController::class, 'update' ] ) -> name( 'especialidades.update' );
 
 Route::get( '/pacientes', [ PacientesController::class, 'index' ] ) -> name( 'pacientes.index' );
+Route::get( '/pacientes/create', [ PacientesController::class, 'create' ] ) -> name( 'pacientes.create' );
+Route::post( '/pacientes/store', [ PacientesController::class, 'store' ] ) -> name( 'pacientes.store' );
+Route::delete( '/pacientes/destroy/{id}', [ PacientesController::class, 'destroy' ] ) -> name( 'pacientes.destroy' );
+Route::get( '/pacientes/edit/{id}', [ PacientesController::class, 'edit' ] ) -> name( 'pacientes.edit' );
+Route::get( '/pacientes/{id}', [ PacientesController::class, 'show' ] ) -> name( 'pacientes.show' );
+Route::put( '/pacientes/update/{id}', [ PacientesController::class, 'update' ] ) -> name( 'pacientes.update' );

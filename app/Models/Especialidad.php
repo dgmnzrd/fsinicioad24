@@ -9,7 +9,7 @@ class Especialidad extends Model
 {
     use HasFactory;
     protected $table = 'especialidades';
-    protected $primaryKey = 'especialidades_id';
+    protected $primaryKey = 'id';
     protected $fillable = [ 'nombre', 'descripcion' ];
     public $timestamps = false ;
 }

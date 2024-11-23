@@ -1,0 +1,18 @@
+@extends( 'layouts.app' )
+@section( 'content' )
+<title>Info del Paciente</title>
+    <div class="animated-header text-center my-3">
+        <h1>Info del Paciente</h1>
+    </div>
+    <div class="container mt-4">
+        <a href="{{ route('pacientes.index') }}" class="btn btn-primary mb-3">Regresar</a>
+        <div class="card bg-light text-white">
+            <div class="card-body">
+                <p><strong>Nombre:</strong> {{$paciente->nombre}}</p>
+                <p><strong>Apellido:</strong> {{$paciente->apellido}}</p>
+                <p><strong>Edad:</strong> {{$paciente->edad}}</p>
+                <p><strong>Sexo:</strong> {{$paciente->sexo}}</p>
+            </div>
+        </div>
+    </div>
+@endsection

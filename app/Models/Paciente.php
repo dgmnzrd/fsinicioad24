@@ -9,7 +9,7 @@ class Paciente extends Model
 {
     use HasFactory;
     protected $table = 'pacientes';
-    protected $primaryKey = 'pacientes_id';
+    protected $primaryKey = 'id';
     protected $fillable = [ 'nombre', 'apellido', 'edad', 'sexo' ];
     public $timestamps = false ;
 }
