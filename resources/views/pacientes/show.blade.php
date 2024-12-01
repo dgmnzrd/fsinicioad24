@@ -5,8 +5,8 @@
         <h1>Info del Paciente</h1>
     </div>
     <div class="container mt-4">
-        <a href="{{ route('pacientes.index') }}" class="btn btn-primary mb-3">Regresar</a>
-        <div class="card bg-light text-white">
+        <a href="{{ route('pacientes.index') }}" class="btn btn-light mb-3">Regresar</a>
+        <div class="card bg-secondary text-white">
             <div class="card-body">
                 <p><strong>Nombre:</strong> {{$paciente->nombre}}</p>
                 <p><strong>Apellido:</strong> {{$paciente->apellido}}</p>

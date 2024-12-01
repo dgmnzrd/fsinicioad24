@@ -12,6 +12,11 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Especialidad</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Años de Experiencia</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -22,6 +27,11 @@
                 <td>{{ $doctor->nombre }}</td>
                 <td>{{ $doctor->apellido }}</td>
                 <td>{{ $doctor->especialidad }}</td>
+                <td>{{ $doctor->email }}</td>
+                <td>{{ $doctor->telefono }}</td>
+                <td>{{ $doctor->direccion }}</td>
+                <td>{{ $doctor->fecha_nacimiento }}</td>
+                <td>{{ $doctor->anos_experiencia }}</td>
                 <td>
                     <form action="{{ route('doctores.destroy', $doctor->id) }}" method="POST" class="d-inline">
                         @csrf
@@ -40,3 +50,4 @@
         {{ $doctores->links('pagination::bootstrap-4') }}
     </div>
 @endsection
+
