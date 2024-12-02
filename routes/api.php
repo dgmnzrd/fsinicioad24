@@ -35,4 +35,9 @@ Route::delete( '/doctores/{id}', [ DoctoresApiController::class, 'destroy' ] );
 Route::put( '/doctores/{id}', [ DoctoresApiController::class, 'update' ] );
 
 Route::get( '/especialidades', [ EspecialidadesApiController::class, 'index' ] );
+
 Route::get( '/pacientes', [ PacientesApiController::class, 'index' ] );
+Route::get( '/pacientes/{id}', [ PacientesApiController::class, 'show' ] );
+Route::post( '/pacientes', [ PacientesApiController::class, 'store' ] );
+Route::delete( '/pacientes/{id}', [ PacientesApiController::class, 'destroy' ] );
+Route::put( '/pacientes/{id}', [ PacientesApiController::class, 'update' ] );
