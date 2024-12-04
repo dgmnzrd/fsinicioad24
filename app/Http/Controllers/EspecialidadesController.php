@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Especialidad;
 
-class especialidadesController extends Controller
+class EspecialidadesController extends Controller
 {
     //
     function index()

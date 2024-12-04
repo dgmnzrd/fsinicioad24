@@ -4,6 +4,7 @@ use App\Http\Controllers\MedicinaApiController;
 use App\Http\Controllers\DoctoresApiController;
 use App\Http\Controllers\EspecialidadesApiController;
 use App\Http\Controllers\PacientesApiController;
+use App\Http\Controllers\CitasApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,4 +36,16 @@ Route::delete( '/doctores/{id}', [ DoctoresApiController::class, 'destroy' ] );
 Route::put( '/doctores/{id}', [ DoctoresApiController::class, 'update' ] );
 
 Route::get( '/especialidades', [ EspecialidadesApiController::class, 'index' ] );
+
 Route::get( '/pacientes', [ PacientesApiController::class, 'index' ] );
+Route::get( '/pacientes/{id}', [ PacientesApiController::class, 'show' ] );
+Route::post( '/pacientes', [ PacientesApiController::class, 'store' ] );
+Route::delete( '/pacientes/{id}', [ PacientesApiController::class, 'destroy' ] );
+Route::put( '/pacientes/{id}', [ PacientesApiController::class, 'update' ] );
+
+Route::get( '/citas', [ CitasApiController::class, 'index' ] );
+Route::get( '/citas/{id}', [ CitasApiController::class, 'show' ] );
+Route::post( '/citas', [ CitasApiController::class, 'store' ] );
+Route::delete( '/citas/{id}', [ CitasApiController::class, 'destroy' ] );
+Route::put( '/citas/{id}', [ CitasApiController::class, 'update' ] );
+

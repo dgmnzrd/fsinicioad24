@@ -5,6 +5,7 @@ use App\Http\Controllers\Vista1Controller;
 use App\Http\Controllers\DoctoresController;
 use App\Http\Controllers\EspecialidadesController;
 use App\Http\Controllers\PacientesController;
+use App\Http\Controllers\CitasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,3 +74,11 @@ Route::delete( '/pacientes/destroy/{id}', [ PacientesController::class, 'destroy
 Route::get( '/pacientes/edit/{id}', [ PacientesController::class, 'edit' ] ) -> name( 'pacientes.edit' );
 Route::get( '/pacientes/{id}', [ PacientesController::class, 'show' ] ) -> name( 'pacientes.show' );
 Route::put( '/pacientes/update/{id}', [ PacientesController::class, 'update' ] ) -> name( 'pacientes.update' );
+
+Route::get( '/citas', [ CitasController::class, 'index' ] ) -> name( 'citas.index' ); // Mostrar todas las citas
+Route::get( '/citas/create', [ CitasController::class, 'create' ] ) -> name( 'citas.create' ); // Crear nueva cita
+Route::post( '/citas/store', [ CitasController::class, 'store' ] ) -> name( 'citas.store' ); // Guardar nueva cita
+Route::delete( '/citas/destroy/{id}', [ CitasController::class, 'destroy' ] ) -> name( 'citas.destroy' ); // Eliminar cita
+Route::get( '/citas/edit/{id}', [ CitasController::class, 'edit' ] ) -> name( 'citas.edit' ); // Editar cita
+Route::get( '/citas/{id}', [ CitasController::class, 'show' ] ) -> name( 'citas.show' ); // Mostrar detalles de una cita
+Route::put( '/citas/update/{id}', [ CitasController::class, 'update' ] ) -> name( 'citas.update' ); // Actualizar cita

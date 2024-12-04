@@ -32,6 +32,11 @@ class PacientesController extends Controller
         $paciente->apellido = $request->apellido;
         $paciente->edad = $request->edad;
         $paciente->sexo = $request->sexo;
+        $paciente->direccion = $request->direccion;
+        $paciente->telefono = $request->telefono;
+        $paciente->fecha_nacimiento = $request->fecha_nacimiento;
+        $paciente->email = $request->email;
+        $paciente->diagnostico = $request->diagnostico; 
         $paciente->save();
         return redirect()->route( 'pacientes.index' );
     }
@@ -56,6 +61,11 @@ class PacientesController extends Controller
         $paciente->apellido = $request->apellido;
         $paciente->edad = $request->edad;
         $paciente->sexo = $request->sexo;
+        $paciente->direccion = $request->direccion;
+        $paciente->telefono = $request->telefono;
+        $paciente->fecha_nacimiento = $request->fecha_nacimiento;
+        $paciente->email = $request->email;
+        $paciente->diagnostico = $request->diagnostico;
         $paciente->save();
         return redirect()->route( 'pacientes.index' );
     }
